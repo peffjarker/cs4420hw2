@@ -4,10 +4,10 @@
 #
 
 CFLAGS = -g -O2
-CC = gcc
+CC = g++
 
 PROGRAM = mybash
-CFILES = parser.c mybash.c
+CFILES = parser.cc mybash.cc
 HFILE = parser.h
 
 
@@ -36,4 +36,3 @@ ${OFILES}: ${HFILE} parser.h
 
 clean:
 	/bin/rm -f *.o ${PROGRAM} *~
-

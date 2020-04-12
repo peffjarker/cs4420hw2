@@ -2,12 +2,12 @@
  * Headstart for Assignment 2
  * CS 4420/5420
  * SS 2019/2020
- * 
- * Student Name:
- * 
- * 
- * 
- * 
+ *
+ * Student Name: Jeff Parker
+ *
+ *
+ *
+ *
  */
 
 /* the states */
@@ -36,4 +36,3 @@ struct CommandData {
 
 
 extern int ParseCommandLine(char *, struct CommandData *);
-
