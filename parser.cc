@@ -25,6 +25,8 @@ IsAlphaNum(char c) /* is this a valid char for a pathname or filename? */
     return 1;
   if (c == '.' || c == '_' || c == '/' || c == '-')
     return 1;
+  if (c == '=')
+    return 1;
   return 0;
 }
 
@@ -105,7 +107,7 @@ int ParseCommandLine(char *line, struct CommandData *data) {
   data->infile = data->outfile = NULL;
   data->background = 0;
 
-  while (line[i] != '\0' && line[i] != '\n') {
+  while ((line[i] != '\0' && line[i] != '\n')) {
     if (IsAlphaNum(line[i])) {
       if (inaword) {
         token[j++] = line[i];
